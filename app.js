@@ -10,6 +10,9 @@ name    student id      paid
 carine  3480239         paid    
 marley  0238034         unpaid
 
+The following will be useful
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+
 1c) Your app should provide functionality to edit and delete students on the list
 name    student id      paid    edit        delete
 carine  3480239         paid    edit icon   trash icon
