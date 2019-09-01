@@ -1,17 +1,16 @@
 .main-container {
-	width: 100%;
 	display: flex;
 	justify-content: center;
-	align-content: center;
-}
-
-.form-container, .enrollment-list-container {
-	border: 1px solid grey;
-	margin: 10px;
 	width: 100%;
-	height: 70vh;
 }
 
-.form-container h3, .enrollment-list-container h3 {
+.input-container, .list-container {
+	width: 100%;
+	height: 70vh; 
+	border: 1px solid grey; 
+}
+
+.input-container h3, .list-container h3 {
 	text-align: center;
-} 
+}
+

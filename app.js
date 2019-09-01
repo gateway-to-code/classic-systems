@@ -23,3 +23,44 @@ the class is full should be added to class waitlist
 
 2b) Add a drop down to your form that lets you select a students major. The 
 */
+
+
+
+submitForm = function (event) {
+    console.log('this is the this', this);
+    event.preventDefault();
+    let formData = {}
+    console.log('this is the event ', event);
+    formData['name'] = document.getElementById('name').value;
+    formData['studentId'] = document.getElementById('student_id').value
+    formData['payStatus'] = this.checkPayment(document.getElementsByName('payStatus'));
+    console.log('this is the name', formData);
+    insertData(formData);
+
+}
+
+checkPayment = function(element) {
+    console.log()
+    for(let i=0; i <= element.length; i++) {
+        if(element[i].checked) {
+            return element[i].value;
+        }
+    }
+}
+
+insertData = function(data) {
+    let table = document.getElementById('registration_table');
+    console.log('this is the table ', table);
+    let newRow = table.insertRow(0);
+    console.log('new Row', newRow, table);
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+
+
+    // Add some text to the new cells:
+    cell1.innerHTML = data.name;
+    cell2.innerHTML = data.studentId;
+    cell3.innerHTML = data.payStatus;
+
+}

@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>In and Out</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Class Registration</title>
+	<link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
 	<div class="main-container">
-		
-		<div class="form-container">
-			<h3>Enter Student Data</h3>
+		<div class="input-container">
+			<h3>Please enter Student Name</h3>
+			<form onSubmit="submitForm(event)">
+				<label for="name">Full Name</label>
+				<input type="text" id="name"></br>
+				<label for="student_id">Student Id</label>
+				<input type="text" id="student_id"></br>
+				<label for="payment">Pay Status</label>
+				<input type="radio" name="payStatus" value="paid">Paid
+				<input type="radio" name="payStatus" value="unpaid"> UnPaid</br>
+				<input type="submit">
+			</form>
 		</div>
-		<div class="enrollment-list-container">
-			<h3>Student Registration List</h3>
+		<div class="list-container">
+			<h3>Registration List</h3>
+			<table >
+				<thead>
+					<tr>
+						<th>Student Name</th>
+						<th>Student Id</th>
+						<th>Pay Status</th>
+					</tr>
+				</thead>
+				<tbody id="registration_table">
+
+				</tbody>
+			</table>
 		</div>
 	</div>
+
 
 	<script src="app.js"></script>
 </body>
